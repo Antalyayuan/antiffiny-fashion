@@ -66,7 +66,7 @@ Expected output:
 
 ```
 [dotenv@17.2.3] injecting env (8) from .env.local
-✅ Server running on https://tiffany-fashion-production.up.railway.app/
+✅ Server running on https://antiffany-fashion-production2.up.railway.app/
 ```
 
 ---
