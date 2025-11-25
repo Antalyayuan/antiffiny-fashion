@@ -1,0 +1,23 @@
+import sgMail from "@sendgrid/mail";
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+// 统一邮件发送模块
+export async function sendEmail({ to, subject, html }) {
+  const msg = {
+    to,
+    from: {
+      email: process.env.EMAIL_FROM, 
+      name: process.env.EMAIL_FROM_NAME || "Tiffany Fashion Annie"
+    },
+    subject,
+    html,
+  };
+
+  try {
+    await sgMail.send(msg);
+    console.log(`📧 Email sent to ${to} | Subject: ${subject}`);
+  } catch (error) {
+    console.error("❌ SendGrid Email Error:", error);
+  }
+}
