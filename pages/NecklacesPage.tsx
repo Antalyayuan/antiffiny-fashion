@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { COLORS } from "../constants";
-import ProductCard from "../components/ProductCard";
 
 // 模拟数据（后面可以从数据库或API获取）
 const products = [

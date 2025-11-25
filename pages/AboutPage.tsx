@@ -6,7 +6,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { COMPANY_INFO, COLORS } from "../constants";
+import { COLORS } from "../constants";
 import type { CoreValue } from "../types";
 
 import aboutBg from "../assets/images/aboutBg.jpg";

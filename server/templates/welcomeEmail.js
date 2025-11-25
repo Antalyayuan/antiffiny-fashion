@@ -1,4 +1,4 @@
-import { FRONTEND_URL } from "./config.js";
+import { FRONTEND_URL } from "../config.js";
 
 export function welcomeEmailTemplate(name) {
   return `

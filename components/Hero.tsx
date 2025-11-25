@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { COLORS } from "../constants";
 import { Play, Pause, Volume2, VolumeX } from "lucide-react";
 
 import heroVideo from "../assets/images/hero.mp4";
