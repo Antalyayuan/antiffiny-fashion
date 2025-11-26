@@ -98,7 +98,7 @@ const UserPage: React.FC = () => {
       <div className="hidden md:flex items-center justify-center h-full w-full">
         <img
           src={giftImage}
-          alt="Tiffany Gift"
+          alt="Antiffany Gift"
           className="w-3/4 max-w-md object-contain"
         />
       </div>
@@ -285,7 +285,7 @@ const UserPage: React.FC = () => {
                 htmlFor="terms"
                 className="text-sm text-gray-600 select-none"
               >
-                I agree to Tiffany & Co.’s{" "}
+                I agree to Antiffany & Co.’s{" "}
                 <a
                   href="#"
                   className={`text-${COLORS.brandGreen} underline hover:text-${COLORS.brandDark}`}

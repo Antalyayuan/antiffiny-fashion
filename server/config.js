@@ -44,6 +44,6 @@ export const BCRYPT_ROUNDS = Number(process.env.BCRYPT_ROUNDS || 10);
 
 export const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
 export const EMAIL_FROM = process.env.EMAIL_FROM;
-export const EMAIL_FROM_NAME = process.env.EMAIL_FROM_NAME || "Tiffany Fashion Annie";
+export const EMAIL_FROM_NAME = process.env.EMAIL_FROM_NAME || "Antiffany Fashion Annie";
 
 export const CRON_SECRET = process.env.CRON_SECRET;

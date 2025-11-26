@@ -3,6 +3,8 @@ import jwt from "jsonwebtoken";
 import { stripe } from "../services/stripeService.js";
 import { FRONTEND_URL, JWT_SECRET, STRIPE_WEBHOOK_SECRET } from "../config.js";
 import { createOrder, findOrderById, markOrderPaid } from "../services/orderService.js";
+import { sendEmail } from "../services/emailService.js";
+import { orderSuccessEmailTemplate } from "../templates/orderSuccessEmail.js";
 
 export const checkoutRouter = express.Router();
 
@@ -62,7 +64,6 @@ checkoutRouter.post("/", async (req, res) => {
   res.json({ url: session.url });
 });
 
-// webhook raw body will be set in app.js, not here
 export const handleWebhook = async (req, res) => {
   const sig = req.headers["stripe-signature"];
   let event;
@@ -89,14 +90,19 @@ export const handleWebhook = async (req, res) => {
     const imageBase = FRONTEND_URL;
     items = items.map((item) => ({
       ...item,
-      image: item.image.startsWith("http") ? item.image : `${imageBase}${item.image}`,
+      image: item.image?.startsWith("http") ? item.image : `${imageBase}${item.image}`,
     }));
 
     await markOrderPaid(session.id, paymentEmail);
 
-    // send confirmation email via orderService/emailService if desired
-    // left here to reuse existing sendEmail/orderSuccessEmailTemplate
+    // ✅ 发送订单确认邮件给网站用户
+    await sendEmail({
+      to: order.user_email,
+      subject: "🧾 Your Antiffany Fashion Annie Order Confirmation",
+      html: orderSuccessEmailTemplate(order, items),
+    });
   }
 
   res.sendStatus(200);
 };
+

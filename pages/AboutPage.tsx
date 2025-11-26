@@ -21,19 +21,19 @@ import icon4Img from "../assets/images/icon4.jpg";
 const coreValuesData: CoreValue[] = [
   {
     image: icon1Img,
-    title: "T by Tiffany",
+    title: "T by Antiffany",
   },
   {
     image: icon2Img,
-    title: "Lock by Tiffany",
+    title: "Lock by Antiffany",
   },
   {
     image: icon3Img,
-    title: "HardWear by Tiffany",
+    title: "HardWear by Antiffany",
   },
   {
     image: icon4Img,
-    title: "Knot by Tiffany",
+    title: "Knot by Antiffany",
   },
 ];
 
@@ -89,7 +89,7 @@ const AboutPage: React.FC = () => {
               <p
                 className={`text-${COLORS.textSecondary} leading-relaxed text-justify`}
               >
-                Only Tiffany could craft a diamond ring worthy of your love
+                Only Antiffany could craft a diamond ring worthy of your love
                 story. Discover classic and contemporary styles and settings,
                 from traditional solitaire engagement rings to modern pavé and
                 halo designs – all made with unparalleled craftsmanship to our
@@ -109,7 +109,7 @@ const AboutPage: React.FC = () => {
 
       <SectionContainer
         className={`bg-${COLORS.bgWhite} pt-4 pb-20 -mt-8`}
-        title="The Tiffany Icons"
+        title="The Antiffany Icons"
       >
         <div className="relative group w-full">
           <Swiper

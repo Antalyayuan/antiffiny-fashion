@@ -1,4 +1,4 @@
-# 💎 Tiffany Fashion Website
+# 💎 Antiffany Fashion Website
 
 A full-stack **fashion e-commerce demo** built with **React + TypeScript (Vite frontend)** and **Node.js + Express (backend)**.  
 Includes **Stripe** integration for payment processing and a **MySQL** database for product and order management.
@@ -20,7 +20,7 @@ Includes **Stripe** integration for payment processing and a **MySQL** database 
 
 ```bash
 git clone https://github.com/your-company/tiffany-fashion.git
-cd Tiffany
+cd Antiffany
 npm install
 ```
 

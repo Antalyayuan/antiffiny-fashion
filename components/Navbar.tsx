@@ -38,7 +38,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
           >
             <img
               src={logo}
-              alt="Tiffany Logo"
+              alt="Antiffany Logo"
               className="h-14 md:h-20 w-auto"
             />
           </Link>

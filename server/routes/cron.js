@@ -18,18 +18,21 @@ cronRouter.use(assertCronSecret);
 
 cronRouter.get("/abandoned-orders", async (_req, res) => {
   const [rows] = await pool.execute(
-    `SELECT * FROM orders WHERE status='unpaid' AND email_sent = 0 AND created_at < NOW() - INTERVAL 30 MINUTE`
+    `SELECT * FROM orders WHERE status='unpaid' AND email_sent = 0 AND created_at < NOW() - INTERVAL 3 MINUTE`
   );
 
   await Promise.all(
     rows.map(async (order) => {
       let items = [];
       try {
-        items = JSON.parse(order.items);
-      } catch {}
+        items = Array.isArray(order.items) ? order.items : JSON.parse(order.items);
+      } catch {
+        items = [];
+      }
+
       await sendEmail({
         to: order.user_email,
-        subject: "Complete your order at Tiffany Fashion Annie",
+        subject: "Complete your order at Antiffany Fashion Annie",
         html: abandonedEmailTemplate(order.checkout_url, items),
       });
       await markAbandonedEmailSent(order.id);
@@ -38,6 +41,7 @@ cronRouter.get("/abandoned-orders", async (_req, res) => {
 
   res.json({ count: rows.length });
 });
+
 
 cronRouter.get("/cleanup-unpaid", async (_req, res) => {
   const deleted = await cleanupUnpaidOlderThan(24);
