@@ -12,7 +12,7 @@ export const PRODUCTS: Product[] = [
   // -------------------- NECKLACES --------------------
   {
     id: 1,
-    name: "Tiffany Titan by Pharrell Williams",
+    name: "Antiffany Titan by Pharrell Williams",
     description: "Necklace in rose gold with diamonds — bold, contemporary, and elegant.",
     price: "£55,500",
     category: "necklaces",
@@ -38,7 +38,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 3,
-    name: "Tiffany & Co. Schlumberger® ",
+    name: "Antiffany & Co. Schlumberger® ",
     description: "Bird on a Rock Pendant in yellow gold and platinum with a stunning green gemstone centerpiece.",
     price: "£127,500",
     category: "necklaces",
@@ -53,7 +53,7 @@ export const PRODUCTS: Product[] = [
   // -------------------- EARRINGS --------------------
   {
     id: 4,
-    name: "Sixteen Stone by Tiffany",
+    name: "Sixteen Stone by Antiffany",
     description: "Hoop Earrings in Platinum and Yellow Gold with Diamonds",
     price: "£21,400",
     category: "earrings",
@@ -66,7 +66,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 5,
-    name: "Tiffany Victoria® ",
+    name: "Antiffany Victoria® ",
     description: "Diamond Vine Earrings in 18k Rose Gold",
     price: "£9,775",
     category: "earrings",
@@ -79,7 +79,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 6,
-    name: "Tiffany Titan by Pharrell Williams",
+    name: "Antiffany Titan by Pharrell Williams",
     description: "Pearl Earrings in Yellow Gold with Diamonds",
     price: "£11,200",
     category: "earrings",
@@ -94,7 +94,7 @@ export const PRODUCTS: Product[] = [
   // -------------------- RINGS --------------------
   {
     id: 7,
-    name: "Tiffany Victoria®",
+    name: "Antiffany Victoria®",
     description: "Vine Ring in Platinum with a Tanzanite and Diamonds",
     price: "£18,500",
     category: "rings",
@@ -107,7 +107,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 8,
-    name: "Apollo by Tiffany",
+    name: "Apollo by Antiffany",
     description: "Ring in yellow gold and platinum with diamonds — a statement of luminous beauty.",
     price: "£41,800",
     category: "rings",
@@ -120,7 +120,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 9,
-    name: "Bird on a Rock by Tiffany",
+    name: "Bird on a Rock by Antiffany",
     description: "Lovebirds ring in platinum and gold with diamonds, romantic and radiant.",
     price: "£32,200",
     category: "rings",
@@ -135,7 +135,7 @@ export const PRODUCTS: Product[] = [
   // -------------------- BRACELETS --------------------
   {
     id: 10,
-    name: "Tiffany HardWear Pearl Bracelet",
+    name: "Antiffany HardWear Pearl Bracelet",
     description: "Pearl bracelet in silver, 7–8 mm pearls, showcasing refined modern elegance.",
     price: "£1,375",
     category: "bracelets",
@@ -148,8 +148,8 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 11,
-    name: "Return to Tiffany™ Heart Tag Bead Bracelet",
-    description: "Classic Tiffany Blue® heart tag bracelet in sterling silver.",
+    name: "Return to Antiffany™ Heart Tag Bead Bracelet",
+    description: "Classic Antiffany Blue® heart tag bracelet in sterling silver.",
     price: "£275",
     category: "bracelets",
     image: "/images/bracelet2.jpg",
@@ -161,7 +161,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 12,
-    name: "Sixteen Stone by Tiffany",
+    name: "Sixteen Stone by Antiffany",
     description: "Bangle in Platinum with Diamonds",
     price: "£52,000",
     category: "bracelets",

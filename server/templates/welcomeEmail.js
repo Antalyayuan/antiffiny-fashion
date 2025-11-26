@@ -6,7 +6,7 @@ export function welcomeEmailTemplate(name) {
     <div style="max-width: 600px; margin: auto; background: white; border-radius: 12px; padding: 30px; border: 1px solid #e5e5e5;">
       
       <h1 style="text-align: center; color: #0abab5; font-size: 24px; margin-bottom: 10px;">
-        Tiffany Fashion Annie
+        Antiffany Fashion Annie
       </h1>
 
       <h2 style="text-align: center; color: #333; margin-bottom: 20px;">
@@ -44,7 +44,7 @@ export function welcomeEmailTemplate(name) {
       </div>
 
       <p style="margin-top: 30px; font-size: 13px; color: #777; text-align: center;">
-        We hope you enjoy your shopping experience with Tiffany Fashion Annie!
+        We hope you enjoy your shopping experience with Antiffany Fashion Annie!
         <br/>
         If you need help, just reply to this email — we’re here for you 💕
       </p>
@@ -52,7 +52,7 @@ export function welcomeEmailTemplate(name) {
     </div>
 
     <p style="text-align: center; font-size: 11px; color: #aaa; margin-top: 15px;">
-      © ${new Date().getFullYear()} Tiffany Fashion Annie. All rights reserved.
+      © ${new Date().getFullYear()} Antiffany Fashion Annie. All rights reserved.
     </p>
   </div>
 `;

@@ -8,7 +8,7 @@ export async function sendEmail({ to, subject, html }) {
     to,
     from: {
       email: process.env.EMAIL_FROM, 
-      name: process.env.EMAIL_FROM_NAME || "Tiffany Fashion Annie"
+      name: process.env.EMAIL_FROM_NAME || "Antiffany Fashion Annie"
     },
     subject,
     html,

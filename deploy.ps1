@@ -1,5 +1,5 @@
 # ===============================================
-# 🚀 Smart Git Deploy Script for Tiffany Project
+# 🚀 Smart Git Deploy Script for Antiffany Project
 # Author: Davethan Tech
 # ===============================================
 

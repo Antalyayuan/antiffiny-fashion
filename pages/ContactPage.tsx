@@ -90,7 +90,7 @@ const ContactPage: React.FC = () => {
                 Get in Touch
               </h3>
               <p className={`text-${COLORS.textSecondary} mb-6`}>
-                From finding the perfect Tiffany gift to jewellery styling
+                From finding the perfect Antiffany gift to jewellery styling
                 advice, our Client Advisors are always here to help.
               </p>
             </div>
@@ -260,8 +260,8 @@ const ContactPage: React.FC = () => {
           </h2>
           <div className="w-full">
             <iframe
-              title="Tiffany & Co. Leeds"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d602915.8732584083!2d-2.2062257521912327!3d53.82258285819857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb1c6b9ab61c5%3A0x2479d669868e73cd!2sTiffany%20%26%20Co.!5e0!3m2!1sen!2suk!4v1761920005693!5m2!1sen!2suk"
+              title="Antiffany & Co. Leeds"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d602915.8732584083!2d-2.2062257521912327!3d53.82258285819857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb1c6b9ab61c5%3A0x2479d669868e73cd!2sAntiffany%20%26%20Co.!5e0!3m2!1sen!2suk!4v1761920005693!5m2!1sen!2suk"
               width="100%"
               height="450"
               style={{ border: 0 }}

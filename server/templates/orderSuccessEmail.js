@@ -40,7 +40,7 @@ export function orderSuccessEmailTemplate(order, items) {
     <div style="max-width: 600px; margin: auto; background: white; border-radius: 12px; padding: 30px; border: 1px solid #e5e5e5;">
       
       <h1 style="text-align: center; color: #0abab5; font-size: 24px; margin-bottom: 10px;">
-        Tiffany Fashion Annie
+        Antiffany Fashion Annie
       </h1>
 
       <h2 style="text-align: center; color: #333; margin-top: 0;">
@@ -83,13 +83,13 @@ export function orderSuccessEmailTemplate(order, items) {
       <p style="margin-top: 30px; font-size: 13px; color: #777; text-align: center;">
         If you have any questions, feel free to reply to this email.
         <br/>
-        Thank you for shopping with Tiffany Fashion Annie.
+        Thank you for shopping with Antiffany Fashion Annie.
       </p>
 
     </div>
 
     <p style="text-align: center; font-size: 11px; color: #aaa; margin-top: 15px;">
-      © ${new Date().getFullYear()} Tiffany Fashion Annie. All rights reserved.
+      © ${new Date().getFullYear()} Antiffany Fashion Annie. All rights reserved.
     </p>
   </div>
 `;

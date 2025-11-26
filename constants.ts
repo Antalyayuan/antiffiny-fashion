@@ -29,7 +29,7 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const COMPANY_INFO = {
-	name: "TIFFANY&CO.",
+	name: "ANTIFFANY",
 	tagline: "Your surest partner to a wealthier future",
 	ceoName: "Abubakar Bello",
 	contactEmail: "annie.wang@davethan.tech",

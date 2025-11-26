@@ -24,7 +24,7 @@ export function abandonedEmailTemplate(checkoutUrl, items) {
     <div style="max-width: 600px; margin: auto; background: white; border-radius: 12px; padding: 30px; border: 1px solid #e5e5e5;">
       
       <h1 style="text-align: center; color: #0abab5; font-size: 24px; margin-bottom: 10px;">
-        Tiffany Fashion Annie
+        Antiffany Fashion Annie
       </h1>
 
       <h2 style="text-align: center; color: #333; margin-top: 0;">
@@ -70,7 +70,7 @@ export function abandonedEmailTemplate(checkoutUrl, items) {
     </div>
 
     <p style="text-align: center; font-size: 11px; color: #aaa; margin-top: 15px;">
-      © ${new Date().getFullYear()} Tiffany Fashion Annie. All rights reserved.
+      © ${new Date().getFullYear()} Antiffany Fashion Annie. All rights reserved.
     </p>
   </div>
 `;

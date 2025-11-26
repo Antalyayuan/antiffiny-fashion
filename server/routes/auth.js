@@ -25,7 +25,7 @@ authRouter.post("/signup", async (req, res) => {
 
   await sendEmail({
     to: email,
-    subject: "Welcome to Tiffany Fashion Annie",
+    subject: "Welcome to Antiffany Fashion Annie",
     html: welcomeEmailTemplate(firstName),
   });
 
