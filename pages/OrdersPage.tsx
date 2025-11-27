@@ -40,7 +40,7 @@ const OrdersPage: React.FC = () => {
         const API = import.meta.env.VITE_API_BASE;
         const response = await fetch(`${API}/orders`, {
           headers: {
-            Authorization: `Bearer ${token}`, // ✅ 带上 JWT token
+            Authorization: `Bearer ${token}`, // ✅ Include JWT token
           },
         });
 
@@ -59,7 +59,7 @@ const OrdersPage: React.FC = () => {
         const data = await response.json();
         setOrders(data);
       } catch (err) {
-        console.error("❌ 获取订单失败:", err);
+        console.error("❌ Failed to fetch orders:", err);
       } finally {
         setLoading(false);
       }
@@ -114,7 +114,7 @@ const OrdersPage: React.FC = () => {
               key={order.id}
               className="bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition-all"
             >
-              {/* 订单头部 */}
+              {/* Order header */}
               <div
                 className="flex justify-between items-center p-6 cursor-pointer"
                 onClick={() => setExpandedId(isExpanded ? null : order.id)}
@@ -134,13 +134,12 @@ const OrdersPage: React.FC = () => {
 
                 <div className="flex items-center gap-3">
                   <span
-                    className={`px-3 py-1 text-xs rounded-full font-semibold ${
-                      order.status === "paid"
+                    className={`px-3 py-1 text-xs rounded-full font-semibold ${order.status === "paid"
                         ? "bg-green-100 text-green-700"
                         : order.status === "failed"
-                        ? "bg-red-100 text-red-600"
-                        : "bg-yellow-100 text-yellow-700"
-                    }`}
+                          ? "bg-red-100 text-red-600"
+                          : "bg-yellow-100 text-yellow-700"
+                      }`}
                   >
                     {order.status.toUpperCase()}
                   </span>
@@ -153,7 +152,7 @@ const OrdersPage: React.FC = () => {
                 </div>
               </div>
 
-              {/* 展开内容 */}
+              {/* Expanded content */}
               <AnimatePresence>
                 {isExpanded && (
                   <motion.div
@@ -193,7 +192,7 @@ const OrdersPage: React.FC = () => {
                       </p>
                     )}
 
-                    {/* 支付按钮 */}
+                    {/* Payment button */}
                     <div className="flex justify-end mt-4">
                       {order.status === "unpaid" && order.checkout_url && (
                         <a

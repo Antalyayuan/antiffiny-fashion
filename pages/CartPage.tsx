@@ -10,12 +10,12 @@ const CartPage = () => {
     0
   );
 
-  // ✅ 处理 Checkout 按钮点击
+  // ✅ Handle Checkout button click
   const handleCheckout = async () => {
     const token = localStorage.getItem("auth_token");
     const user = localStorage.getItem("user_firstname");
 
-    // 🚫 未登录则跳转登录页
+    // 🚫 Redirect to login page if not logged in
     if (!token) {
       alert("Please sign in to proceed to checkout.");
       window.location.href = "/#/user";
@@ -28,12 +28,12 @@ const CartPage = () => {
 
       const API = import.meta.env.VITE_API_BASE;
 
-      // ✅ 调用后端接口，携带 token
+      // ✅ Call backend API with token
       const response = await fetch(`${API}/create-checkout-session`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`, // ✅ 传入登录 token
+          Authorization: `Bearer ${token}`, // ✅ Pass login token
         },
         body: JSON.stringify({ cart }),
       });
@@ -55,14 +55,14 @@ const CartPage = () => {
       }
 
       console.log("🚀 Step 5 - Redirecting to Stripe:", data.url);
-      window.location.href = data.url; // ✅ 跳转 Stripe 页面
+      window.location.href = data.url; // ✅ Redirect to Stripe page
     } catch (error) {
       console.error("🔥 Step 6 - Checkout error:", error);
       alert("❌ Checkout failed, please try again.");
     }
   };
 
-  // ✅ 空购物车提示
+  // ✅ Empty cart message
   if (cart.length === 0)
     return (
       <div className="p-10 text-center text-gray-600">
@@ -80,7 +80,7 @@ const CartPage = () => {
     <div className="p-10 max-w-4xl mx-auto">
       <h1 className="text-3xl font-serif mb-8 text-center">Shopping Cart</h1>
 
-      {/* ✅ 商品列表 */}
+      {/* ✅ Product list */}
       <div className="space-y-6">
         {cart.map((item) => (
           <div
@@ -110,15 +110,15 @@ const CartPage = () => {
         ))}
       </div>
 
-      {/* ✅ 总价区域 */}
+      {/* ✅ Total price area */}
       <div className="flex justify-between mt-8 text-lg font-semibold border-t pt-6">
         <p>Total:</p>
         <p>£{total.toLocaleString()}</p>
       </div>
 
-      {/* ✅ 操作按钮区域 */}
+      {/* ✅ Action buttons area */}
       <div className="flex flex-wrap justify-between items-center mt-8 gap-4">
-        {/* 返回继续购物 */}
+        {/* Return to continue shopping */}
         <Link
           to="/products"
           className="border border-gray-400 text-gray-700 px-6 py-3 rounded hover:bg-gray-100 transition"
@@ -126,7 +126,7 @@ const CartPage = () => {
           ← Continue Shopping
         </Link>
 
-        {/* 清空购物车 */}
+        {/* Clear cart */}
         <button
           onClick={clearCart}
           className="text-red-500 border border-red-400 px-6 py-3 rounded hover:bg-red-100 transition"
@@ -134,7 +134,7 @@ const CartPage = () => {
           Clear Cart
         </button>
 
-        {/* 前往结账 */}
+        {/* Proceed to checkout */}
         <button
           onClick={handleCheckout}
           className="bg-black text-white px-8 py-3 rounded hover:bg-[#81D8D0] transition"

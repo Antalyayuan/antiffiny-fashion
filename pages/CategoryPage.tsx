@@ -4,7 +4,7 @@ import { PRODUCTS } from "../data/products";
 const CategoryPage = () => {
   const { categoryName } = useParams<{ categoryName?: string }>();
 
-  // 过滤出属于该分类的产品
+  // Filter products by category
   const filteredProducts = PRODUCTS.filter(
     (p) => p.category.toLowerCase() === categoryName?.toLowerCase()
   );

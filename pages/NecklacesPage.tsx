@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { COLORS } from "../constants";
 
-// 模拟数据（后面可以从数据库或API获取）
+// Mock data (can be fetched from database or API later)
 const products = [
   {
     id: 1,
@@ -34,7 +34,7 @@ const NecklacesPage: React.FC = () => {
         Necklaces & Pendants
       </h1>
 
-      {/* 商品卡片区域 */}
+      {/* Product card area */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
         {products.map((product) => (
           <div key={product.id} className="text-center">

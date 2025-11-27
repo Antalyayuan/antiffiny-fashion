@@ -12,7 +12,7 @@ const SuccessPage = () => {
 
   return (
     <div className="p-20 text-center">
-      {/* ✅ 动画效果 */}
+      {/* ✅ Animation effect */}
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}

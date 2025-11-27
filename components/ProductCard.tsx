@@ -34,7 +34,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         className="rounded-full w-62 h-62 mb-4 object-cover border-4 border-white shadow-lg"
       />
 
-      {/* 点击名字跳转 */}
+      {/* Click name to navigate */}
       <Link
         to={`/category/${member.name.toLowerCase().replace(/\s+/g, "-")}`}
         className={`text-lg font-semibold text-${COLORS.brandDark} mb-1 hover:underline hover:text-${COLORS.brandGreen} transition-colors duration-300`}

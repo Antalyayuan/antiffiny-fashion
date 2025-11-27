@@ -56,7 +56,7 @@ const UserPage: React.FC = () => {
       );
 
       setMessage("✅ Signed in successfully!");
-      // 🚀 跳转到首页
+      // 🚀 Redirect to homepage
       window.location.href = "/#/";
     } catch (err: any) {
       setError(err.message);
@@ -109,21 +109,19 @@ const UserPage: React.FC = () => {
         <div className="flex space-x-8 border-b border-gray-200 mb-8">
           <button
             onClick={() => setActiveTab("signin")}
-            className={`pb-2 ${
-              activeTab === "signin"
+            className={`pb-2 ${activeTab === "signin"
                 ? "border-b-2 border-black text-black"
                 : "text-gray-500 hover:text-black"
-            }`}
+              }`}
           >
             Sign In
           </button>
           <button
             onClick={() => setActiveTab("signup")}
-            className={`pb-2 ${
-              activeTab === "signup"
+            className={`pb-2 ${activeTab === "signup"
                 ? "border-b-2 border-black text-black"
                 : "text-gray-500 hover:text-black"
-            }`}
+              }`}
           >
             Create an Account
           </button>

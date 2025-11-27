@@ -2,12 +2,12 @@ import sgMail from "@sendgrid/mail";
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-// 统一邮件发送模块
+// Unified email sending module
 export async function sendEmail({ to, subject, html }) {
   const msg = {
     to,
     from: {
-      email: process.env.EMAIL_FROM, 
+      email: process.env.EMAIL_FROM,
       name: process.env.EMAIL_FROM_NAME || "Antiffany Fashion Annie"
     },
     subject,
