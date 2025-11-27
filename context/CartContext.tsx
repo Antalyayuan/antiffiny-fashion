@@ -20,7 +20,7 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
   const [cart, setCart] = useState<CartItem[]>([]);
 
   const addToCart = (product: Product) => {
-    console.log("✅ addToCart 被触发:", product.name);
+    console.log("addToCart triggered:", product.name);
     setCart((prev) => {
       const existing = prev.find((item) => item.id === product.id);
       if (existing) {

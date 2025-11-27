@@ -28,7 +28,7 @@ const ScrollToTop: React.FC = () => {
   return null;
 };
 
-// 简单的登录保护组件
+// Simple login protection component
 const ProtectedRoute = ({ children }: { children: JSX.Element }) => {
   const token = localStorage.getItem("auth_token");
   return token ? children : <Navigate to="/user" replace />;
@@ -64,7 +64,7 @@ const App: React.FC = () => {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/user" element={<UserPage />} />
 
-            {/*  未登录时访问 /orders 会自动跳去 /user */}
+            {/* Redirect to /user when accessing /orders without login */}
             <Route
               path="/orders"
               element={

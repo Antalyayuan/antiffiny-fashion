@@ -95,7 +95,7 @@ export const handleWebhook = async (req, res) => {
 
     await markOrderPaid(session.id, paymentEmail);
 
-    // ✅ 发送订单确认邮件给网站用户
+    // ✅ Send order confirmation email to website user
     await sendEmail({
       to: order.user_email,
       subject: "🧾 Your Antiffany Fashion Annie Order Confirmation",

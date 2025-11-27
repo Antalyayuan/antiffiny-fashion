@@ -12,10 +12,10 @@ const ProductDetailPage = () => {
   return (
     // <div className="grid md:grid-cols-2 gap-12 p-10">
     <div className="grid md:grid-cols-[70%_30%] gap-12 p-10">
-      {/* 左侧 */}
+      {/* Left side */}
 
       <div className="grid grid-rows-2 gap-4">
-        {/* 第一排：一张图 */}
+        {/* First row: one image */}
         <div>
           <img
             src={product.gallery[0]}
@@ -24,7 +24,7 @@ const ProductDetailPage = () => {
           />
         </div>
 
-        {/* 第二排：两张图并排 */}
+        {/* Second row: two images side by side */}
         <div className="grid grid-cols-2 gap-4">
           {product.gallery.slice(1).map((img, index) => (
             <img
@@ -37,7 +37,7 @@ const ProductDetailPage = () => {
         </div>
       </div>
 
-      {/* 右侧 */}
+      {/* Right side */}
       <div className="space-y-20 py-20">
         <h1 className="text-3xl font-serif leading-snug">{product.name}</h1>
         <p className="text-gray-600 text-[17px] leading-relaxed">
@@ -54,7 +54,7 @@ const ProductDetailPage = () => {
             }
 
             console.log("🛒 addToCart clicked:", product.name);
-            addToCart(product); // ✅ 已登录，正常添加
+            addToCart(product); // ✅ Logged in, add normally
           }}
           className="bg-black text-white px-8 py-3 rounded-md hover:bg-[#81D8D0] transition"
         >

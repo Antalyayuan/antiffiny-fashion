@@ -39,12 +39,12 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="border-t border-gray-400 pt-8 mt-8 text-sm text-gray-400 flex justify-between items-center flex-wrap">
-          {/* 左边版权信息 */}
+          {/* Left side copyright info */}
           <p className="text-left">
             &copy; {currentYear} {COMPANY_INFO.name}
           </p>
 
-          {/* 右边社交链接 */}
+          {/* Right side social links */}
           <div className="flex space-x-6">
             <a
               href="https://instagram.com"

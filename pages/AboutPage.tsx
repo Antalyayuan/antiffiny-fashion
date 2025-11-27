@@ -43,7 +43,7 @@ const AboutPage: React.FC = () => {
       <PageHeader
         title="Our Stories"
         subtitle=""
-        image={aboutBg} // 你本地的图片
+        image={aboutBg} // Your local image
       />
 
       <SectionContainer className={`bg-${COLORS.bgWhite} pt-4 pb-20 -mt-8`}>
@@ -141,7 +141,7 @@ const AboutPage: React.FC = () => {
             ))}
           </Swiper>
 
-          {/* ✅ 自定义箭头 */}
+          {/* ✅ Custom arrows */}
           <button
             className={`custom-prev absolute left-8 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 bg-white text-gray-800 hover:bg-${COLORS.brandGreen} hover:text-white rounded-full w-12 h-12 flex items-center justify-center shadow-md transition-all duration-300 z-10`}
           >

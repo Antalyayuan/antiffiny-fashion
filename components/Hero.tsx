@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
 
   return (
     <div className="relative w-full h-[95vh] overflow-hidden">
-      {/* 背景视频 */}
+      {/* Background video */}
       <video
         ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover object-center"
@@ -42,10 +42,10 @@ const Hero: React.FC = () => {
         playsInline
       />
 
-      {/* 渐变遮罩层 */}
+      {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
 
-      {/* 前景内容 */}
+      {/* Foreground content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -85,7 +85,7 @@ const Hero: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Scroll Down 提示 */}
+      {/* Scroll Down indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 10, 0] }}
@@ -116,7 +116,7 @@ const Hero: React.FC = () => {
         </div>
       </motion.div>
 
-      {/* 播放 / 暂停按钮（右下角） */}
+      {/* Play / Pause button (bottom right) */}
       <button
         onClick={handleTogglePlay}
         className="absolute bottom-6 right-6 bg-white/30 hover:bg-white/50 text-white p-3 rounded-full shadow-lg backdrop-blur-sm transition duration-300 z-20"
@@ -124,7 +124,7 @@ const Hero: React.FC = () => {
         {isPlaying ? <Pause size={22} /> : <Play size={22} />}
       </button>
 
-      {/* 声音开关按钮（左下角） */}
+      {/* Sound toggle button (bottom left) */}
       <button
         onClick={handleToggleMute}
         className="absolute bottom-6 left-6 bg-white/30 hover:bg-white/50 text-white p-3 rounded-full shadow-lg backdrop-blur-sm transition duration-300 z-20"

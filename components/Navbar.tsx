@@ -4,7 +4,7 @@ import type { NavItem } from "../types";
 import { COLORS } from "../constants";
 import { MenuIcon, XIcon } from "./IconComponents";
 import logo from "../assets/images/logo.png";
-import { useCart } from "../context/CartContext"; // ✅ 购物车上下文
+import { useCart } from "../context/CartContext"; // ✅ Cart context
 
 interface NavbarProps {
   navItems: NavItem[];
@@ -50,11 +50,10 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                 <Link
                   key={item.label}
                   to={item.path}
-                  className={`px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap ${
-                    location.pathname === item.path
+                  className={`px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap ${location.pathname === item.path
                       ? `bg-${COLORS.brandGreen} text-white`
                       : `text-${COLORS.textPrimary} hover:bg-gray-200`
-                  } transition-colors duration-150`}
+                    } transition-colors duration-150`}
                 >
                   {item.label}
                 </Link>
@@ -142,11 +141,10 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                 <Link
                   key={item.label}
                   to={item.path}
-                  className={`block w-full px-4 py-3 rounded-md text-base font-medium ${
-                    location.pathname === item.path
+                  className={`block w-full px-4 py-3 rounded-md text-base font-medium ${location.pathname === item.path
                       ? `bg-${COLORS.brandGreen} text-white`
                       : `text-${COLORS.textPrimary} hover:bg-gray-200 hover:text-${COLORS.brandBlue}`
-                  } transition-colors duration-150`}
+                    } transition-colors duration-150`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
